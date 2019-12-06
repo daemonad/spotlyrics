@@ -9,7 +9,7 @@ const cookieParser = require('cookie-parser')
 const dotenv = require('dotenv')
 dotenv.config()
 
-const port = process.env.PORT || 3000
+const port = 3000
 const client_id = process.env.client_id
 const client_secret = process.env.client_secret
 const redirect_uri = process.env.redirect_uri
