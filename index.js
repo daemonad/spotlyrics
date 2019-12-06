@@ -2,15 +2,17 @@ const express = require('express')
 const path = require('path')
 const request = require('request')
 const fs = require('fs')
-const SpotifyWebApi = require('spotify-web-api-node')
-
 const cors = require('cors')
 const querystring = require('querystring')
 const cookieParser = require('cookie-parser')
 
-const client_id = '334f79630bd74e168de88508fe83b3d0'
-const client_secret = '74712a4650d64e86af6026364589b2b2'
-const redirect_uri = 'http://192.168.1.205:8888/callback'
+const dotenv = require('dotenv')
+dotenv.config()
+
+const port = process.env.PORT || 3000
+const client_id = process.env.client_id
+const client_secret = process.env.client_secret
+const redirect_uri = process.env.redirect_uri
 
 /**
  * Generates a random string containing numbers and letters
@@ -166,5 +168,4 @@ app.get('/refresh_token', function(req, res) {
   })
 })
 
-console.log('Listening on 8888')
-app.listen(8888)
+app.listen(port, () => console.log(`Server listening on port ${port}!`))

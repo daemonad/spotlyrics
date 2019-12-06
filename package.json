@@ -23,7 +23,6 @@
     "fs": "0.0.1-security",
     "path": "^0.12.7",
     "querystring": "^0.2.0",
-    "request": "^2.88.0",
-    "spotify-web-api-node": "^4.0.0"
+    "request": "^2.88.0"
   }
 }
