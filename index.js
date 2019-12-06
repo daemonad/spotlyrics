@@ -12,7 +12,7 @@ dotenv.config()
 const port = process.env.PORT || 3000
 const client_id = process.env.client_id
 const client_secret = process.env.client_secret
-const redirect_uri = `https://spotlyrics01.herokuapp.com${port}/callback`
+const redirect_uri = `https://spotlyrics01.herokuapp.com/callback`
 
 /**
  * Generates a random string containing numbers and letters
