@@ -9,10 +9,10 @@ const cookieParser = require('cookie-parser')
 const dotenv = require('dotenv')
 dotenv.config()
 
-const port = 3000
+const port = process.env.PORT || 3000
 const client_id = process.env.client_id
 const client_secret = process.env.client_secret
-const redirect_uri = process.env.redirect_uri
+const redirect_uri = `https://spotlyrics01.herokuapp.com${port}/callback`
 
 /**
  * Generates a random string containing numbers and letters
