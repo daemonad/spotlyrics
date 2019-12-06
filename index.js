@@ -118,7 +118,7 @@ app.get('/callback', function(req, res) {
           })*/
           trackName = body.item.name
           var isBTS = body.item.artists.find(function(artist) { 
-            return artist.name === 'BTS'
+            return artist.name === 'BTS' || 'RM' || 'j-hope' || 'Agust D'
           })
           console.log(body.item)
           if (isBTS) res.redirect(`http://google.com/search?q=${encodeURIComponent(trackName)}+lyrics+doolset`)
